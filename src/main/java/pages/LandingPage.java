@@ -25,43 +25,35 @@ public class LandingPage {
         this.driver = driver;
 
     }
-
     public ProductDetailedPage clickAntiqueClockImg(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1350)");
         driver.findElement(antiqueClock).click();
         return new ProductDetailedPage(driver);
     }
-
     public void search(String search){
         driver.findElement(searchField).sendKeys(search);
         driver.findElement(searchField).sendKeys(Keys.ENTER);
     }
-
     public String productTextMatch(){
        String text = driver.findElement(displaiedItemTitle).getText();
        return text;
     }
-
     public void clickSearchIcon(){
         driver.findElement(searchIcon).click();
     }
-
     public int isProductDisplaied(){
         List<WebElement> list = driver.findElements(products);
         return list.size();
     }
-
     public void clickElectronics(){
         driver.findElement(electronicsFilter).click();
     }
-
     public ShopPage clickShopLink(){
         driver.findElement(shopLink).click();
         System.out.println("asd");
         return new ShopPage(driver);
     }
-
     public AboutUsPage clickAboutUs() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1700)");
@@ -83,22 +75,17 @@ public class LandingPage {
         driver.findElement(policy).click();
         return new PrivacyPolicyPage(driver);
     }
-
     public LoginPage clickLoginLink(){
         driver.findElement(linkLogin).click();
         return new LoginPage(driver);
     }
-
     public MyAccountPage clickMyAccountLink(){
         driver.manage().window().maximize();
         driver.findElement(myAccountLink).click();
         return new MyAccountPage(driver);
     }
-
     public RegisterPage clickRegLink(){
         driver.findElement(registerLink).click();
         return new RegisterPage(driver);
     }
-
-
 }

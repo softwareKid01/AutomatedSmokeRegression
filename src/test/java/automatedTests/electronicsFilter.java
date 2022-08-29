@@ -5,7 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class electronicsFilter extends BaseTest {
-
     @Test
     public void filterProductsSuccessfully() throws InterruptedException {
         landingPage.clickElectronics();

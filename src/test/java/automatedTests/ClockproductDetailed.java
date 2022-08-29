@@ -7,7 +7,6 @@ import pages.LandingPage;
 import pages.ProductDetailedPage;
 
 public class ClockproductDetailed extends BaseTest {
-
     @Test
     public void productdetailedsucceed(){
        ProductDetailedPage productDetailedPage = landingPage.clickAntiqueClockImg();

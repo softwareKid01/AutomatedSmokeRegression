@@ -17,11 +17,11 @@ public class bidNow extends BaseTest {
        loginPage.enterPassword("Malta@123");
        Thread.sleep(1000);
        LandingPage landingPage = loginPage.clickLoginButton();
-        Thread.sleep(2000);
+       Thread.sleep(2000);
        MyAccountPage myAccountPage = landingPage.clickMyAccountLink();
        BidPage bidPage = myAccountPage.clickBidNowButton();
        bidPage.enterBid("33");
        bidPage.clickBid();
-        Assert.assertEquals(bidPage.bidInputText(),bidPage.bidLabelText());
+       Assert.assertEquals(bidPage.bidInputText(),bidPage.bidLabelText());
     }
 }

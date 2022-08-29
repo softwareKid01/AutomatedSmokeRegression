@@ -5,7 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class searchBlankProduct extends BaseTest {
-
     @Test
     public void searchBlankProduct(){
         landingPage.search("");

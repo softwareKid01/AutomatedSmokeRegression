@@ -13,10 +13,10 @@ public class RegisterPage {
     private By userEmail = By.xpath("//input[@id='email']");
     private By passwsord = By.xpath("//input[@id='password']");
     private By regButton = By.xpath("//button[@type='button']");
+    private By errorMsg = By.xpath("//p[.='Please enter your first name correctly. ']");
     public RegisterPage(WebDriver driver) {
         this.driver = driver;
     }
-
     public void sendRegData(String fname, String lname, String email,String pwd){
         driver.findElement(firstName).sendKeys(fname);
         driver.findElement(lastName).sendKeys(lname);
@@ -28,5 +28,9 @@ public class RegisterPage {
         js.executeScript("window.scrollBy(0,800)");
         Thread.sleep(1000);
         driver.findElement(regButton).click();
+    }
+    public Boolean getErrorMsg(){
+        Boolean msg = driver.findElement(errorMsg).isDisplayed();
+        return msg;
     }
 }

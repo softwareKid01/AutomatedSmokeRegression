@@ -11,7 +11,6 @@ public class BidPage {
     public BidPage(WebDriver driver) {
         this.driver = driver;
     }
-
     public void enterBid(String num){
         driver.findElement(bidInput).sendKeys(num);
     }

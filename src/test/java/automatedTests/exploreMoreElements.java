@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import pages.ShopPage;
 
 public class exploreMoreElements extends BaseTest {
-
     @Test
     public void exploreMoreProducts() throws InterruptedException {
        ShopPage shopPage = landingPage.clickShopLink();

@@ -9,7 +9,6 @@ public class PrivacyPolicyPage {
     public PrivacyPolicyPage(WebDriver driver) {
         this.driver = driver;
     }
-
     public String getTitle(){
         return driver.findElement(title).getText();
     }

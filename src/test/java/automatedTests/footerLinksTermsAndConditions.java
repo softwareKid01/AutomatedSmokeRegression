@@ -7,7 +7,6 @@ import pages.AboutUsPage;
 import pages.TermsAndConditionsPage;
 
 public class footerLinksTermsAndConditions extends BaseTest {
-
     @Test
     public void openFooterLinks() throws InterruptedException {
      TermsAndConditionsPage termsAndConditionsPage = landingPage.termsAndConditions();

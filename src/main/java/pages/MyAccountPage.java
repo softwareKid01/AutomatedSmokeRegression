@@ -11,7 +11,6 @@ public class MyAccountPage {
         this.driver = driver;
 
     }
-
     public BidPage clickBidNowButton() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1250)");
